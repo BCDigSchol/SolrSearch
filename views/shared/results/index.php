@@ -11,7 +11,7 @@
 
 
 <?php queue_css_file('results'); ?>
-<?php echo head(array('title' => __('Solr Search')));?>
+<?php echo head(array('title' => __('Search')));?>
 
 
 <h1><?php echo __('Search the Collection'); ?></h1>
