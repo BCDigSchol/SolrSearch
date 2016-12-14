@@ -129,11 +129,11 @@ class SolrSearch_ResultsController
         $facet = $this->_request->facet;
 
         // Form the composite Solr query.
-        if (!empty($facet)) $query .= " AND {$facet}";
+        if (!empty($facet)) $query = "($query) AND {$facet}";
 
         // Limit the query to public items if required
         if($limitToPublicItems) {
-           $query .= ' AND public:"true"';
+            $query = "($query) AND public:\"1\"";
         }
 
         return $query;
